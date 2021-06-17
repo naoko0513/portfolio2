@@ -7,24 +7,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="top" class="wrapper">
-        <div class="container">
-            <div class="top-text">
-                <h1>Wlecom to my portfolio</h1>
-            </div>
-            <div class="top-menu">
-                <p>Top</p>
-                <p>About</p>
-                <p>Skills</p>
-                <p>Works</p>
-            </div>
-        </div>    
-    </div>
+    <header>
+        <div id="top" class="wrapper">
+            <div class="container">
+                <div class="top-text">
+                    <h1>Wlecom to my portfolio</h1>
+                </div>
+                <div class="top-menu">
+                    <ul>
+                        <li><a href="#top-img">Top</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#works">Works</a></li>
+                    </ul>    
+                </div>
+            </div>    
+        </div>
+    </header>    
     <div id="top-img">
         <img src="images/top1.jpg"></img>
     </div>
@@ -73,30 +75,54 @@
         <div class="container">
             <div class="works-box">
                 <img src="images/works1.png"></img>
-                <p>模写したサイト（初級編）</p>
+                <a href="https://naoko0513.github.io/html-beginner/">模写したサイト（初級編）</a>
             </div>
             <div class="works-box">
                 <img src="images/works2.png"></img>
-                <p>模写したサイト（初級編）</p>
+                <a href="https://naoko0513.github.io/bike/">模写したサイト（初級編）</a>
             </div>
             <div class="works-box">
                 <img src="images/works3.png"></img>
-                <p>模写したサイト（中級編）</p>
+                <a href="https://naoko0513.github.io/travelblog/">模写したサイト（中級編）</a>
             </div>
             <div class="works-box">
                 <img src="images/works4.png"></img>
-                <p>模写したサイト（上級編）</p>
+                <a href="https://naoko0513.github.io/sneakers/">模写したサイト（上級編）</a>
             </div>
             <div class="works-box">
                 <img src="images/works5.png"></img>
-                <p>初めて作成したポートフォリオサイト</p>
+                <a href="https://naoko0513.github.io/portfolio/">初めて作成したポートフォリオサイト</a>
             </div>
             <div class="works-box">
                 <img src="images/works6.png"></img>
-                <p>現在のポートフォリオサイト</p>
+                <a href=" https://naoko0513.github.io/portfolio2/">現在のポートフォリオサイト</a>
             </div>
-        </div>    
+        </div>
     </div>
-    
+    <div id="footer">
+        <div class="footer-box">
+            © portfolio
+        </div>
+    </div>
+    <script>
+    $(function () {
+        //トップ画像のフェードイン
+        $(document).ready(function(){
+            $('#top-img').addClass("fadeInDown");
+        });
+        
+        //ポートフォリオのフェードイン
+        $(window).scroll(function () {
+            const wHeight = $(window).height();
+            const scrollAmount = $(window).scrollTop();
+            $('.works-box').each(function () {
+                const targetPosition = $(this).offset().top;
+                if(scrollAmount > targetPosition - wHeight + 60) {
+                    $(this).addClass("fadeInDown");
+                }
+            });
+        });
+    });        
+    </script>
 
 </body>
