@@ -13,7 +13,6 @@
 }
 
 .container{
-    max-width: 1240px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
