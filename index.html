@@ -10,23 +10,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <header>
-        <div id="top" class="wrapper">
-            <div class="container">
-                <div class="top-text">
-                    <h1>Wlecom to my portfolio</h1>
-                </div>
-                <div class="top-menu">
-                    <ul>
-                        <li><a href="#top-img">Top</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#works">Works</a></li>
-                    </ul>    
-                </div>
-            </div>    
-        </div>
-    </header>    
+    <div id="top" class="wrapper">
+        <div class="container">
+            <div class="top-text">
+                <h1>Wlecom to my portfolio</h1>
+            </div>
+            <div class="top-menu">
+                <ul>
+                    <li><a class="nav-link" href="#top-img">Top</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#skills">Skills</a></li>
+                    <li><a class="nav-link" href="#works">Works</a></li>
+                </ul>    
+            </div>
+        </div>    
+    </div>
     <div id="top-img">
         <img src="images/top1.jpg"></img>
     </div>
@@ -122,6 +120,36 @@
                 }
             });
         });
+        
+        //top-linkが押された時の動き
+        $(".nav-link").click(function () {
+            var headerHeight = $('#top').innerHeight();
+            var targetId = $(this).attr("href");
+            var position = $(targetId).offset().top;
+            var speed = 600;
+            $("html,body").animate({scrollTop:position - headerHeight},speed);
+        });
+        
+        //カーソルがあった時の処理
+        $(function() {
+        $('.works-box img')
+        .hover(
+            function(){
+                $(this).stop().animate({
+                    'width':'100%',
+                    'height':'40vh',
+                    'marginTop':'-32px'
+                },'fast');
+            },
+            function () {
+                $(this).stop().animate({
+                    'width':'100%',
+                    'height':'40vh',
+                    'marginTop':'0px'
+                },'fast');
+            }
+        );
+    });
     });        
     </script>
 
