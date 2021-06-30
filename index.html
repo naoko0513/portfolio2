@@ -1,156 +1,224 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-<body>
-    <div id="top" class="wrapper">
-        <div class="container">
-            <div class="top-text">
-                <h1>Wlecom to my portfolio</h1>
-            </div>
-            <div class="top-menu">
-                <ul>
-                    <li><a class="nav-link" href="#top-img">Top</a></li>
-                    <li><a class="nav-link" href="#about">About</a></li>
-                    <li><a class="nav-link" href="#skills">Skills</a></li>
-                    <li><a class="nav-link" href="#works">Works</a></li>
-                </ul>    
-            </div>
-        </div>    
-    </div>
-    <div id="top-img">
-        <img src="images/top1.jpg"></img>
-    </div>
-    <div id="about" class="wrapper">
-        <div class="title">
-            <h2>About</h2>
-        </div>    
-    </div>        
-    <div id="about-img" class="wrapper">
-        <div class="container">
-            <div class="about-images">
-                <img src="images/about1.png"></img>
-            </div>    
-            <div class="about-text">
-                <h3>Name</h3>
-                <p>Naoko Hirata</p>
-                <h3>Age</h3>
-                <p>28</p>
-            </div>
-        </div>    
-    </div>
-    <div id="skills" class="wrapper">
-        <div class="title">
-            <h2>Skills</h2>
-        </div>    
-        <div class="container">
-            <div class="skills-box">
-                <h3>HTML</h3>
-                <img src="images/skills1.png"></img>
-            </div>
-            <div class="skills-box">
-                <h3>CSS</h3>
-                <img src="images/skills2.png"></img>
-            </div>    
-            <div class="skills-box">
-                <h3>jQuery</h3>
-                <img src="images/skills4.png"></img>
-            </div>    
-        </div>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ポートフォリオサイト</title>
 
-    <div id="works" class="wrapper">
-        <div class="title">
-            <h2>Works</h2>
+        <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+        <!--リセットのcss-->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" type="text/css" />
+
+        <!--スライドショー用のcss-->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    </head>
+    <body>
+        <!--メニューバー-->
+        <div id="top" class="wrapper">
+            <div class="container">
+                <div class="top-text">
+                    <h1>Welcom to my portfolio</h1>
+                </div>
+                <div class="top-menu">
+                    <ul>
+                        <li><a class="nav-link" href="#top-img">Top</a></li>
+                        <li><a class="nav-link" href="#about">About</a></li>
+                        <li><a class="nav-link" href="#skills">Skills</a></li>
+                        <li><a class="nav-link" href="#works">Works</a></li>
+                    </ul>    
+                </div>
+            </div>    
         </div>
-        <div class="container">
-            <div class="works-box">
-                <img src="images/works1.png"></img>
-                <a href="https://naoko0513.github.io/html-beginner/">模写したサイト（初級編）</a>
-            </div>
-            <div class="works-box">
-                <img src="images/works2.png"></img>
-                <a href="https://naoko0513.github.io/bike/">模写したサイト（初級編）</a>
-            </div>
-            <div class="works-box">
-                <img src="images/works3.png"></img>
-                <a href="https://naoko0513.github.io/travelblog/">模写したサイト（中級編）</a>
-            </div>
-            <div class="works-box">
-                <img src="images/works4.png"></img>
-                <a href="https://naoko0513.github.io/sneakers/">模写したサイト（上級編）</a>
-            </div>
-            <div class="works-box">
-                <img src="images/works5.png"></img>
-                <a href="https://naoko0513.github.io/portfolio/">初めて作成したポートフォリオサイト</a>
-            </div>
-            <div class="works-box">
-                <img src="images/works6.png"></img>
-                <a href=" https://naoko0513.github.io/portfolio2/">現在のポートフォリオサイト</a>
+
+        <!--トップの画像-->
+        <div id="top-img">
+            <div><img src="images/top1.jpg"></img></div>
+            <div><img src="images/top2.jpg"></img></div>
+            <div><img src="images/top3.jpg"></img></div>
+            <div><img src="images/top4.jpg"></img></div>
+
+        <!--aboutの部分-->
+        </div>
+        <div id="about" class="wrapper">
+            <div class="title">
+                <h2>About</h2>
+            </div>    
+        </div>        
+        <div id="about-img" class="wrapper">
+            <div class="container">
+                <div class="about-images">
+                    <img src="images/about1.png"></img>
+                </div>    
+                <div class="about-text">
+                    <h3>Name</h3>
+                    <p>Naoko Hirata</p>
+                    <h3>Age</h3>
+                    <p>28</p>
+                </div>
+            </div>    
+        </div>
+
+        <!--skillsの部分-->
+        <div id="skills" class="wrapper">
+            <div class="title">
+                <h2>Skills</h2>
+            </div>    
+            <div class="container">
+                <div class="skills-box">
+                    <h3>HTML</h3>
+                    <img src="images/skills1.png"></img>
+                </div>
+                <div class="skills-box">
+                    <h3>CSS</h3>
+                    <img src="images/skills2.png"></img>
+                </div>    
+                <div class="skills-box">
+                    <h3>jQuery</h3>
+                    <img src="images/skills4.png"></img>
+                </div>    
             </div>
         </div>
-    </div>
-    <div id="footer">
-        <div class="footer-box">
-            © portfolio
+
+        <!--worksの部分-->
+        <div id="works" class="wrapper">
+            <div class="title">
+                <h2>Works</h2>
+            </div>
+            <div class="container">
+                <div class="works-box">
+                    <img src="images/works1.png"></img>
+                    <a href="https://naoko0513.github.io/html-beginner/">模写したサイト（初級編）</a>
+                </div>
+                <div class="works-box">
+                    <img src="images/works2.png"></img>
+                    <a href="https://naoko0513.github.io/bike/">模写したサイト（初級編）</a>
+                </div>
+                <div class="works-box">
+                    <img src="images/works3.png"></img>
+                    <a href="https://naoko0513.github.io/travelblog/">模写したサイト（中級編）</a>
+                </div>
+                <div class="works-box">
+                    <img src="images/works4.png"></img>
+                    <a href="https://naoko0513.github.io/sneakers/">模写したサイト（上級編）</a>
+                </div>
+                <div class="works-box">
+                    <img src="images/works5.png"></img>
+                    <a href="https://naoko0513.github.io/portfolio/">初めて作成したポートフォリオサイト</a>
+                </div>
+                <div class="works-box">
+                    <img src="images/works6.png"></img>
+                    <a href="https://naoko0513.github.io/portfolio2/">現在のポートフォリオサイト</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <script>
-    $(function () {
-        //トップ画像のフェードイン
-        $(document).ready(function(){
-            $('#top-img').addClass("fadeInDown");
-        });
-        
-        //ポートフォリオのフェードイン
-        $(window).scroll(function () {
-            const wHeight = $(window).height();
-            const scrollAmount = $(window).scrollTop();
-            $('.works-box').each(function () {
-                const targetPosition = $(this).offset().top;
-                if(scrollAmount > targetPosition - wHeight + 60) {
-                    $(this).addClass("fadeInDown");
-                }
+
+        <!--footerの部分-->
+        <div id="footer">
+            <div class="footer-box">
+                &copy; portfolio
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <script>
+        $(function () {
+            //トップ画像のフェードイン
+            $(document).ready(function(){
+                $('#top-img').addClass("fadeInDown");
             });
-        });
-        
-        //top-linkが押された時の動き
-        $(".nav-link").click(function () {
-            var headerHeight = $('#top').innerHeight();
-            var targetId = $(this).attr("href");
-            var position = $(targetId).offset().top;
-            var speed = 600;
-            $("html,body").animate({scrollTop:position - headerHeight},speed);
-        });
-        
-        //カーソルがあった時の処理
-        $(function() {
-        $('.works-box img')
-        .hover(
-            function(){
-                $(this).stop().animate({
-                    'width':'100%',
-                    'height':'40vh',
-                    'marginTop':'-32px'
-                },'fast');
-            },
-            function () {
-                $(this).stop().animate({
-                    'width':'100%',
-                    'height':'40vh',
-                    'marginTop':'0px'
-                },'fast');
-            }
-        );
-    });
-    });        
-    </script>
 
-</body>
+            //top-imgスライドショー
+            $(document).ready(function(){
+                $('#top-img').slick({
+                    infinite: true,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear',
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    pauseOnFocus: false,
+                    pauseOnHover: false,
+                });
+            });
+
+
+            //skillsのフェードイン
+            $(window).scroll(function () {
+                const wHeight = $(window).height();
+                const scrollAmount = $(window).scrollTop();
+                $('.skills-box').each(function () {
+                    const targetPosition = $(this).offset().top;
+                    if(scrollAmount > targetPosition - wHeight + 60) {
+                        $(this).addClass("fadeInDown");
+                    }
+                });
+            });
+
+
+            //ポートフォリオのフェードイン
+            $(window).scroll(function () {
+                const wHeight = $(window).height();
+                const scrollAmount = $(window).scrollTop();
+                $('.works-box').each(function () {
+                    const targetPosition = $(this).offset().top;
+                    if(scrollAmount > targetPosition - wHeight + 60) {
+                        $(this).addClass("fadeInDown");
+                    }
+                });
+            });
+
+            //top-linkが押された時の動き
+            $(".nav-link").click(function () {
+                var headerHeight = $('#top').innerHeight();
+                var targetId = $(this).attr("href");
+                var position = $(targetId).offset().top;
+                var speed = 600;
+                $("html,body").animate({scrollTop:position - headerHeight},speed);
+            });
+
+            //skillsのカーソルがあった時の処理
+            $('.skills-box')
+                .hover(
+                    function(){
+                        $(this).stop().animate({
+                            'width':'30%',
+                            'height':'40vh',
+                            'marginTop':'-32px'
+                        },'fast');
+                    },
+                    function () {
+                        $(this).stop().animate({
+                            'width':'20%',
+                            'height':'40vh',
+                            'marginTop':'0px'
+                        },'fast');
+                    }
+                );
+
+            //worksのカーソルがあった時の処理
+            $('.works-box img')
+                .hover(
+                    function(){
+                        $(this).stop().animate({
+                            'width':'100%',
+                            'height':'40vh',
+                            'marginTop':'-32px'
+                        },'fast');
+                    },
+                    function () {
+                        $(this).stop().animate({
+                            'width':'100%',
+                            'height':'40vh',
+                            'marginTop':'0px'
+                        },'fast');
+                    }
+                );
+        });
+
+        </script>
+
+    </body>
+</html>
