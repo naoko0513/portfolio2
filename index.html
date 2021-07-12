@@ -55,6 +55,10 @@
                     <p>Naoko Hirata</p>
                     <h3>Age</h3>
                     <p>28</p>
+                    <h3>messege</h3>
+                    <p>2021年1月から侍エンジニア塾に入塾し、プログラミング勉強中です。<br>
+                    現在は簡単なWEBサイトを作成することが出来ます。今後も様々な言語に挑戦していきたいと思います。
+                    
                 </div>
             </div>    
         </div>
@@ -141,9 +145,21 @@
                     autoplaySpeed: 5000,
                     pauseOnFocus: false,
                     pauseOnHover: false,
+                    arrows: false,
                 });
             });
 
+            //aboutのフェードイン
+            $(window).scroll(function () {
+                const wHeight = $(window).height();
+                const scrollAmount = $(window).scrollTop();
+                $('#about-img').each(function () {
+                    const targetPosition = $(this).offset().top;
+                    if(scrollAmount > targetPosition - wHeight + 60) {
+                        $(this).addClass("fadeInDown");
+                    }
+                });
+            });
 
             //skillsのフェードイン
             $(window).scroll(function () {
